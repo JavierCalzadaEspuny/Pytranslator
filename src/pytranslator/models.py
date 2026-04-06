@@ -2,15 +2,13 @@
 
 from pathlib import Path
 
-PROJECT_NAME = "pytranslator"
-
 # ==============================
 # Cache Paths
 # ==============================
 
 def _default_cache_dir() -> Path:
     """Build and create the default translator cache directory in home."""
-    path = Path.home() / f".cache_{PROJECT_NAME}"
+    path = Path.home() / f".cache" / "pytranslator"
     path.mkdir(parents=True, exist_ok=True)
     return path
 
